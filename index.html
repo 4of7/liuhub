@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="展板样式.css" />
+    <script src="js/flexible.js"></script>
+  </head>
+  <body>
+    <div class="headBox">
+      <h1>养老可视化系统-echarts</h1>
+      <div class="showTime"></div>
+      <script>
+        let t = null;
+        t = setTimeout(time, 1000);
+        function time() {
+          clearTimeout(t);
+          dt = new Date();
+          let y = dt.getFullYear();
+          let mt = dt.getMonth() + 1;
+          let day = dt.getDate();
+          let h = dt.getHours();
+          let m = dt.getMinutes();
+          let s = dt.getSeconds();
+          document.querySelector(".showTime").innerHTML =
+            "当前时间:" +
+            y +
+            "年" +
+            mt +
+            "月" +
+            day +
+            "日" +
+            h +
+            "时" +
+            m +
+            "分" +
+            s +
+            "秒";
+        }
+      </script>
+    </div>
+    <section class="mainBox">
+      <div class="column">
+        <!-- 1 -->
+        <div class="panel bar">
+          <h2>柱形图-养老金比较</h2>
+          <div class="chart" id="charts1">图表</div>
+          <div class="footer"></div>
+        </div>
+        <div class="panel line">
+          <h2>
+            折线图-就业行情 <a href="javascript:;">2023</a>
+            <a href="javascript:;">2024</a>
+          </h2>
+          <div class="chart">图表</div>
+          <div class="footer"></div>
+        </div>
+        <div class="panel pie">
+          <h2>饼形图-老人了解信息的渠道</h2>
+          <div class="chart">图表</div>
+          <div class="footer"></div>
+        </div>
+      </div>
+      <div class="column">
+        <!-- 2 -->
+        <div class="no">
+          <div class="hd">
+            <ul>
+              <li>14285700</li>
+              <li>10000000</li>
+            </ul>
+          </div>
+          <div class="bd">
+            <ul>
+              <li>需求人数</li>
+              <li>供应人数</li>
+            </ul>
+          </div>
+        </div>
+        <!-- 地图模块 -->
+        <div class="map">
+          <div class="map1"></div>
+          <div class="map2"></div>
+          <div class="chart666"></div>
+        </div>
+      </div>
+      <div class="column">
+        <!-- 3 -->
+        <div class="panel bar2">
+          <h2>柱形图-养老资金来源占比</h2>
+          <div class="chart">图表</div>
+          <div class="footer"></div>
+        </div>
+        <div class="panel line2">
+          <h2>折线图-月总计支出</h2>
+          <div class="chart">图表</div>
+          <div class="footer"></div>
+        </div>
+        <div class="panel pie2">
+          <h2>饼形图-养老人群年龄占比</h2>
+          <div class="chart">图表</div>
+          <div class="footer"></div>
+        </div>
+      </div>
+    </section>
+    <!-- 引入echarts -->
+    <script src="/js/echarts.min.js"></script>
+    <script src="/js/china.js"></script>
+    <script src="/js/jquery.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>

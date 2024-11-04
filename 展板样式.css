@@ -1,0 +1,223 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+li {
+  list-style: none;
+}
+body {
+  background: url(image/bg.png) no-repeat top center;
+  background-size: cover;
+}
+.headBox {
+  position: relative;
+  background-color: pink;
+  width: 24rem;
+  height: 1.5rem;
+  background: url(image/head_bg.png) no-repeat top center;
+}
+.headBox h1 {
+  font-size: 0.475rem;
+  line-height: 1.4rem;
+  text-align: center;
+  color: #fff;
+  font-weight: 400;
+}
+.headBox .showTime {
+  position: absolute;
+  right: 0.5rem;
+  line-height: 0.6rem;
+  top: 0;
+  color: #ffffff;
+  font-size: 0.2rem;
+  font-weight: 400;
+}
+.mainBox {
+  min-width: 1024px;
+  max-width: 2560px;
+  padding: 0.1rem 0.1rem 0;
+  display: flex;
+}
+.mainBox .column {
+  flex: 3;
+}
+.mainBox .column:nth-child(2) {
+  margin: 0 0.1rem 0.15rem;
+  flex: 5;
+}
+.mainBox .column:nth-child(2) .chart {
+  height: 6rem;
+  width: 8rem;
+}
+.mainBox .panel {
+  position: relative;
+  height: 310px;
+  border: 1px solid rgba(25, 186, 139, 0.17);
+  padding: 0 0.1rem 0.3rem;
+  margin-bottom: 0.15rem;
+  background-color: rgba(255, 255, 255, 0.02);
+}
+.mainBox .panel::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 10px;
+  height: 10px;
+  border-left: 2px solid #02a6b5;
+  border-top: 2px solid #02a6b5;
+  content: "";
+}
+.mainBox .panel::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 10px;
+  height: 10px;
+  border-right: 2px solid #02a6b5;
+  border-top: 2px solid #02a6b5;
+  content: "";
+}
+.mainBox .panel .footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+.mainBox .panel .footer::before {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 10px;
+  height: 10px;
+  border-left: 2px solid #02a6b5;
+  border-bottom: 2px solid #02a6b5;
+  content: "";
+}
+.mainBox .panel .footer::after {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 10px;
+  height: 10px;
+  border-right: 2px solid #02a6b5;
+  border-bottom: 2px solid #02a6b5;
+  content: "";
+}
+.mainBox .panel h2 {
+  height: 0.5rem;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 0.5rem;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 400;
+}
+.mainBox .panel h2 a {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: underline;
+  margin: 0 0.1rem;
+  font-weight: 300;
+}
+.mainBox .panel .chart {
+  height: 2.7rem;
+  width: 6rem;
+}
+.no {
+  background-color: rgba(101, 132, 226, 0.1);
+  padding: 0.2rem;
+}
+.no .hd {
+  position: relative;
+  border: 1px solid rgba(25, 186, 139, 0.17);
+}
+.no .hd ul {
+  display: flex;
+}
+.no .hd ul li {
+  position: relative;
+  flex: 1;
+  line-height: 1rem;
+  font-size: 0.8rem;
+  color: #ffeb7b;
+  text-align: center;
+}
+.no .hd ul li:first-child::after {
+  content: "";
+  position: absolute;
+  top: 25%;
+  height: 50%;
+  right: 0;
+  width: 1px;
+  background-color: rgba(25, 186, 139, 0.17);
+}
+.no .hd::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 10px;
+  height: 10px;
+  border-left: 2px solid #02a6b5;
+  border-top: 2px solid #02a6b5;
+  content: "";
+}
+.no .hd::after {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 10px;
+  height: 10px;
+  border-right: 2px solid #02a6b5;
+  border-bottom: 2px solid #02a6b5;
+  content: "";
+}
+.no .bd {
+  position: relative;
+}
+.no .bd ul {
+  display: flex;
+}
+.no .bd ul li {
+  flex: 1;
+  text-align: center;
+  font-size: 0.2rem;
+  height: 0.5rem;
+  line-height: 0.5rem;
+  color: #fff;
+}
+.map {
+  position: relative;
+  height: 11rem;
+}
+.map .map1 {
+  width: 7rem;
+  height: 7rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: url(image/map.png) no-repeat center;
+  background-size: 100% 100%;
+  opacity: 0.3;
+}
+.map .map2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 10rem;
+  height: 10rem;
+  background: url(image/qiuti.png) no-repeat center;
+  animation: zhuan 15s linear infinite;
+}
+@keyframes zhuan {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+.map .chart666 {
+  position: absolute;
+  height: 9rem;
+  width: 10rem;
+}
